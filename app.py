@@ -1,15 +1,10 @@
 from __future__ import with_statement
 
-from flask import Flask, request, g, redirect, url_for, \
-     abort, render_template, flash
-from flask.helpers import send_file
-from flaskext.markdown import Markdown
+from flask import Flask, redirect, render_template
 
 # create our little application :)
 app = Flask(__name__)
 app.config.from_object(__name__)
-Markdown(app, extensions=['nl2br', 'fenced_code', 'md_in_html' , 'legacy_attrs'])
-
 
 @app.route("/")
 def root():
