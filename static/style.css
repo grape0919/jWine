@@ -1,0 +1,42 @@
+/* img         { border-radius: 50%;} */
+.center_img { border-radius: 50%; margin-left: auto; margin-right: auto;}
+.icon_img   { height: 50px; width: 50px;}
+.rounded_box { border-radius: 5px; padding: 2px;}
+.normal_text { font-weight: 400; font-style:normal; font-size: 13px;}
+.center_text    { text-align: center;}
+
+.bold_text { font-weight: 500;}
+
+.small_color_text_box { border-radius: 5px; padding: 2px; 
+                        font-weight: 400; font-style:normal; font-size: 13px;
+                        background-color: black;
+                        color: white;}
+
+.suport_text    { color: darkorange; font-size:15px; font-style:normal;}
+.text_box    { border-radius: 5px; padding: 2px; 
+                font-weight: 600; font-style:normal;
+                color: rgb(24, 24, 24);
+                text-align: center;}
+
+h1     { color: rgb(24, 24, 24); font-family: nanum godic;}
+h2     { color: rgb(24, 24, 24);}
+h3     { color: rgb(24, 24, 24);}
+h4     { color: rgb(24, 24, 24);}
+h5     { color: rgb(24, 24, 24);}
+h6     { color: rgb(24, 24, 24);}
+
+.bg_tomato {background-color: tomato;}
+.bg_green {background-color: darkgreen;}
+.bg_red {background-color: darkred;}
+.bg_orange {background-color: darkorange;}
+.bg_yellow {background-color: yellow;}
+.bg_skyblue {background-color: skyblue;}
+.bg_blue {background-color: blue;}
+.bg_navy {background-color: navy;}
+.bg_purple {background-color: purple;}
+.bg_teal {background-color: teal;}
+
+.color_gray {color: dimgrey}
+.color_black {color: rgb(24, 24, 24)}
+
+.active {color:  rgb(24, 24, 24); font-weight: 500;}
