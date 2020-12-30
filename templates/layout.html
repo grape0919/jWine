@@ -7,35 +7,32 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <title>Hongkyo-Kim Resume</title>
+        <title>J Wine</title>
     {% endblock %}
 
     {% block body%}
 
         <div class="container">
-            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" >
-                <a class="navbar-brand color_black" href="/" style="font-weight: bold;">Hongkyo Kim's Resume</a>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                
+                <a class="navbar-brand color_black" href="/" style="font-weight: bold; margin-left: 15px;"><img src="{{ url_for('static', filename='resources/img/gray_icon.png') }}" height="25" width="25">  J Wine</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                    </span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto" id="navContent">
-                        <li class="nav-item color_gray active">
-                            <a class="nav-link" href="/about">About me<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link color_gray" href="/cv">Career</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link color_gray" href="/portfolio">Portfolio</a>
-                        </li>
+                        <script type="text/javascript">
+                            currentNav()
+                        </script>
                     </ul>
                 </div>
+
                 <div class="navbar-collapse collapse dual-collapse2">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link color_gray bold_text" href="/download">Download resume & portfolio</a>
+                            <a class="nav-link color_gray bold_text" href="/signin">회원가입</a>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +58,7 @@
                 if(cur == 1){
                     navHtml += ' active';
                 }
-                navHtml += '"><a class="nav-link color_gray" href="/about">About me';
+                navHtml += '"><a class="nav-link color_gray bold_text" href="/">HOME';
                 if(cur == 1){
                         navHtml += '<span class="sr-only">(current)</span></a>'
                 }
@@ -71,7 +68,7 @@
                 if(cur == 2){
                     navHtml += ' active';
                 }
-                navHtml += '"><a class="nav-link color_gray" href="/cv">Career';
+                navHtml += '"><a class="nav-link color_gray bold_text" href="/searcher">와인 검색';
                 if(cur == 2){
                         navHtml += '<span class="sr-only">(current)</span></a>'
                 }
@@ -81,7 +78,7 @@
                 if(cur == 3){
                     navHtml += ' active';
                 }
-                navHtml += '"><a class="nav-link color_gray" href="/portfolio">Portfolio';
+                navHtml += '"><a class="nav-link color_gray bold_text" href="/recommend">와인 추천';
                 if(cur == 3){
                         navHtml += '<span class="sr-only">(current)</span></a>'
                 }

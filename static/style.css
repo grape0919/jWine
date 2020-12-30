@@ -5,7 +5,7 @@
 .normal_text { font-weight: 400; font-style:normal; font-size: 13px;}
 .center_text    { text-align: center;}
 
-.bold_text { font-weight: 500;}
+.bold_text { font-weight: 600;}
 
 .small_color_text_box { border-radius: 5px; padding: 2px; 
                         font-weight: 400; font-style:normal; font-size: 13px;

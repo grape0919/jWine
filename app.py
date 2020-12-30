@@ -10,29 +10,33 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 Markdown(app, extensions=['nl2br', 'fenced_code', 'md_in_html' , 'legacy_attrs'])
 
+
 @app.route("/")
 def root():
-     return redirect("/about")
+     return redirect("/home")
 
-@app.route("/about")
+@app.route("/home")
 def about():
-     return render_template("article.html", content=open("./static/about.md", encoding="UTF-8").read(), currentnav=1)
+     return render_template("main.html", currentnav=1)
 
-@app.route("/cv")
-def cv():
-     return render_template("article.html", content=open("./static/cv.md", encoding="UTF-8").read(), currentnav=2)
+@app.route("/searcher")
+def searcher():
+     return render_template("searcher.html", currentnav=2)
 
-@app.route("/portfolio")
-def portfolio():
-     return render_template("article.html", content=open("./static/portfolio.md", encoding="UTF-8").read(), currentnav=3)
+@app.route("/recommend")
+def recommend():
+     return render_template("recommend.html", currentnav=3)
 
-@app.route("/download")
-def download():
-     file_name = 'static/resources/RESUME_hongkyo-kim.zip'
-     return send_file(file_name,
-                    mimetype='zip',
-                    attachment_filename='RESUME(Hongkyo-kim).zip',# 다운받아지는 파일 이름. 
-                    as_attachment=True)
+@app.route("/signin")
+def signin():
+     return render_template("signin.html", currentnav=0)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
+
+app.register_error_handler(404, page_not_found)
 
 if __name__ == '__main__':
      
